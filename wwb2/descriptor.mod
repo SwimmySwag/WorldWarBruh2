@@ -1,0 +1,15 @@
+version="1.9.*"
+tags={
+	"Balance"
+	"National Focuses"
+	"Historical"
+	"Military"
+	"Events"
+	"Fixes"
+	"Gameplay"
+	"Technologies"
+}
+name="World War Bruh Reloaded"
+picture="5.png"
+supported_version="1.10.*"
+remote_file_id="2299392243"
