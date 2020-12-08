@@ -1465,13 +1465,119 @@ ideas = {
 			modifier = {
 				army_speed_factor = 0.10
 				supply_consumption_factor = -0.2
-				planning_speed = 0.25
+				planning_speed = 0.50
 				no_supply_grace = 48
 				terrain_penalty_reduction = 0.1
 			}
 
 		}
-		
+
+		GER_barbarossa_wintergear = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+			modifier = {
+				army_speed_factor = -0.05
+				supply_consumption_factor = 0.15
+				planning_speed = 0.50
+				no_supply_grace = 72
+				terrain_penalty_reduction = 0.2
+				army_morale_factor	= 0.15
+				acclimatization_cold_climate_gain_factor = 0.15
+			}
+
+
+		}
+
+		GER_barbarossa_summergear = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+			modifier = {
+				army_speed_factor = 0.15
+				supply_consumption_factor = -0.25
+				planning_speed = 0.15
+				no_supply_grace = 24
+				terrain_penalty_reduction = 0.2
+				army_morale_factor	= 0.25
+				out_of_supply_factor = 0.2
+
+			}
+
+
+		}
+
+		GER_barbarossa_winteriscold = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			modifier = {
+				winter_attrition = 0.5
+				acclimatization_cold_climate_gain_factor = -0.75
+
+			}
+
+
+		}
+
+		GER_barbarossa_surpluswintergear = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			modifier = {
+				training_time_army_factor = 0.15
+
+			}
+
+
+		}		
+
 		GER_summer_off = {
 			allowed = {
 				always = no
@@ -1492,10 +1598,10 @@ ideas = {
 			}
 			modifier = {
 				army_speed_factor = 0.05
-				supply_consumption_factor = -0.1
 				planning_speed = 0.25
-				no_supply_grace = 48
+				no_supply_grace = 24
 				terrain_penalty_reduction = 0.1
+				army_morale_factor	= 0.25
 			}
 
 		}

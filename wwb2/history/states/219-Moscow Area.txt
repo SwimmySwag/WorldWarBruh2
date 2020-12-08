@@ -13,7 +13,7 @@ state={
 		set_state_flag = SOV_controls
 		owner = SOV
 		victory_points = {
-			6380 50 
+			6380 65
 		}
 		buildings = {
 			infrastructure = 8

@@ -1,12 +1,12 @@
 
 state={
-	id=353
-	name="STATE_353"
+	id=352
+	name="STATE_352"
 
 	history={
 		owner = TUR
 		victory_points = {
-			11853 1 
+			6935 1 
 		}
 		buildings = {
 			infrastructure = 3
@@ -17,9 +17,9 @@ state={
 	}
 
 	provinces={
-		876 9858 9954 10399 11853 
+		864 1463 7530 10497 11739 12318 12476 
 	}
-	manpower=523537
+	manpower=365490
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

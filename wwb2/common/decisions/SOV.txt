@@ -1601,6 +1601,485 @@ SOV_great_patriotic_war = {
 			country_event = wtt_soviet_hold_city.6
 		}
 	}
+
+	#202 "Kiev"
+	SOV_hold_Kiev = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		#Fail trigger
+		available = {
+			NOT = { controls_state = 202 }
+		}
+
+		days_mission_timeout = 40
+
+		fire_only_once = yes
+
+		is_good = yes
+
+		activation = {
+			has_war = yes
+			has_civil_war = no
+			202 = {
+				is_controlled_by = ROOT
+				OR = {
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = ROOT
+						}
+						OWNER = { tag = ROOT }
+					}
+					NOT = { is_fully_controlled_by = ROOT }
+				}
+			}
+		}
+
+		#Success
+		timeout_effect = {
+			add_stability = 0.02
+			add_war_support = 0.02
+			202 = { save_event_target_as = state }
+			country_event = wtt_soviet_hold_city.5
+			221 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9531
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6554
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 418
+				}
+			}
+			240 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6481
+				}
+			}
+			225 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 3520
+				}
+			}
+			220 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9542
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6254
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 3580
+				}
+			}
+			224 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6330
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 3306
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 3335
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 3226
+				}
+			}
+		}
+		#Fail
+		complete_effect = {
+			202 = { save_event_target_as = state }
+			country_event = wtt_soviet_hold_city.6
+		}
+	}
+
+	#137 "Sevastopol"
+	SOV_hold_Sevastopol = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		#Fail trigger
+		available = {
+			NOT = { controls_state = 137 }
+		}
+
+		days_mission_timeout = 80
+
+		fire_only_once = yes
+
+		is_good = yes
+
+		activation = {
+			has_war = yes
+			has_civil_war = no
+			137 = {
+				is_controlled_by = ROOT
+				OR = {
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = ROOT
+						}
+						OWNER = { tag = ROOT }
+					}
+					NOT = { is_fully_controlled_by = ROOT }
+				}
+			}
+		}
+
+		#Success
+		timeout_effect = {
+			add_stability = 0.02
+			add_war_support = 0.02
+			137 = { save_event_target_as = state }
+			country_event = wtt_soviet_hold_city.5
+			218 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 11559
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 585
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 9417
+				}
+			}
+			234 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 6741
+				}
+			}
+			238 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 426
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 11403
+				}
+			}
+			245 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 484
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 449
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 11459
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9488
+				}
+			}
+			228 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9476
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6519
+				}
+			}
+			227 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 3491
+				}
+			}
+		}
+		#Fail
+		complete_effect = {
+			137 = { save_event_target_as = state }
+			country_event = wtt_soviet_hold_city.6
+		}
+	}
+	
+	#242 "Smolensk"
+	SOV_hold_Smolensk = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		#Fail trigger
+		available = {
+			NOT = { controls_state = 242 }
+		}
+
+		days_mission_timeout = 80
+
+		fire_only_once = yes
+
+		is_good = yes
+
+		activation = {
+			has_war = yes
+			has_civil_war = no
+			242 = {
+				is_controlled_by = ROOT
+				OR = {
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = ROOT
+						}
+						OWNER = { tag = ROOT }
+					}
+					NOT = { is_fully_controlled_by = ROOT }
+				}
+			}
+		}
+
+		#Success
+		timeout_effect = {
+			add_stability = 0.02
+			add_war_support = 0.02
+			242 = { save_event_target_as = state }
+			country_event = wtt_soviet_hold_city.5
+			247 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9256
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 344
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 6245
+				}
+			}
+			246 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 3215
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9343
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9265
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 11224
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9242
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 11349
+				}
+			}
+		}
+		#Fail
+		complete_effect = {
+			242 = { save_event_target_as = state }
+			country_event = wtt_soviet_hold_city.6
+		}
+	}
+	#209 "Pskov"
+	SOV_hold_Pskov = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		#Fail trigger
+		available = {
+			NOT = { controls_state = 209 }
+		}
+
+		days_mission_timeout = 80
+
+		fire_only_once = yes
+
+		is_good = yes
+
+		activation = {
+			has_war = yes
+			has_civil_war = no
+			209 = {
+				is_controlled_by = ROOT
+				OR = {
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = ROOT
+						}
+						OWNER = { tag = ROOT }
+					}
+					NOT = { is_fully_controlled_by = ROOT }
+				}
+			}
+		}
+
+		#Success
+		timeout_effect = {
+			add_stability = 0.02
+			add_war_support = 0.02
+			209 = { save_event_target_as = state }
+			country_event = wtt_soviet_hold_city.5
+			244 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 70
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6095
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 6035
+				}
+			}
+			263 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 71
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6154
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9212
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6225
+				}
+			}
+		}
+		#Fail
+		complete_effect = {
+			209 = { save_event_target_as = state }
+			country_event = wtt_soviet_hold_city.6
+		}
+	}
 }
 
 operations = {

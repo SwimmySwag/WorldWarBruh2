@@ -2479,10 +2479,9 @@ focus_tree = {
 		id = SOV_improve_stalin_line
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = SOV_claim_bessarabia }
-		x = -1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = SOV_claim_bessarabia
-		mutually_exclusive = { focus = SOV_dismantle_stalin_line }
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2697,8 +2696,8 @@ focus_tree = {
 		id = SOV_dnieper_defences
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = SOV_improve_stalin_line }
-		x = 0
-		y = 2
+		x = 2
+		y = 1
 		relative_position_id = SOV_improve_stalin_line
 		cost = 5
 		ai_will_do = {
@@ -2802,178 +2801,13 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SOV_dismantle_stalin_line
-		icon = GFX_focus_ger_bulwark_against_bolshevism
-		prerequisite = { focus = SOV_claim_bessarabia }
-		mutually_exclusive = { focus = SOV_improve_stalin_line }
-		x = 1
-		y = 2
-		relative_position_id = SOV_claim_bessarabia
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		
-		available = {
-			owns_state = 97
-			owns_state = 784
-			owns_state = 78 
-			owns_state = 80
-			owns_state = 766
-			owns_state = 96
-			owns_state = 95
-			owns_state = 94
-			owns_state = 93
-			owns_state = 91
-			owns_state = 89
-			owns_state = 11
-			owns_state = 12
-			owns_state = 189
-			owns_state = 190
-			owns_state = 13
-			owns_state = 191
-			NOT = { has_war_with = GER }
-			has_country_flag = SOV_stalin_finished
-		}
-		
-		completion_reward = {
-			194 = {
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 6556
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 6232
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 3203
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 3293
-				}
-			}
-			201 = {
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 11477
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 3570
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 6593
-				}
-			}
-			206 = {
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 11216
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 11370
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 3267
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 3759
-				}
-			}
-			204 = {
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 11313
-				}
-			}
-			207 = {
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 6220
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 6326
-				}
-			}
-			207 = {
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 126
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 104
-				}
-			}
-			209 = {
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 11392
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 6324
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 11202
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 9120
-				}
-			}
-			210 = {
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 11259
-				}
-				remove_building = {
-					type = bunker
-					level = 3
-					province = 6242
-				}
-			}
-		}
-	}
-	
-	focus = {
 		id = SOV_secure_new_conquests
 		icon = GFX_SOV_goal_NKVD
-		prerequisite = { focus = SOV_dismantle_stalin_line }
-		x = 0
+		prerequisite = { focus = SOV_improve_stalin_line }
+		x = -2
 		y = 1
-		relative_position_id = SOV_dismantle_stalin_line
-		cost = 5
+		relative_position_id = SOV_improve_stalin_line
+		cost = 20
 		ai_will_do = {
 			factor = 1
 		}
@@ -3023,10 +2857,10 @@ focus_tree = {
 	focus = {
 		id = SOV_molotov_line
 		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = SOV_secure_new_conquests }
+		prerequisite = { focus = SOV_improve_stalin_line }
 		x = 0
 		y = 1
-		relative_position_id = SOV_secure_new_conquests
+		relative_position_id = SOV_improve_stalin_line
 		cost = 5
 		ai_will_do = {
 			factor = 1

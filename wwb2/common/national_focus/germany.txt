@@ -2892,7 +2892,7 @@ focus_tree = {
 		x = -7
 		y = 1
 		relative_position_id = GER_danzig_or_war
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10	
 			modifier = {
@@ -2975,11 +2975,72 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
-		id = GER_barb
-		icon = GFX_ger_final_crusade
+		id = GER_barb_wintergear
+		icon = GFX_ger_prepare_to_invade_union
 		prerequisite = { focus = GER_prepare_barb }
+		mutually_exclusive = { focus = GER_barb_summergear }
+		
+		available = {
+			has_tech = tech_logistics_company2
+		}
+
+		bypass = {
+			has_war_with = SOV
+		}
+
+		will_lead_to_war_with = SOV
+		x = 1
+		y = 1
+		relative_position_id = GER_prepare_barb
+		cost = 5
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = horse_equipment
+				amount = -5000
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = -2000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -2000
+			}
+		}
+		
+	}
+
+	focus = {
+		id = GER_barb_summergear
+		icon = GFX_ger_prepare_to_invade_union
+		prerequisite = { focus = GER_prepare_barb }
+		mutually_exclusive = { focus = GER_barb_wintergear }
+
+		
+		available = {
+		}
+
+		bypass = {
+			has_war_with = SOV
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_prepare_barb
+		cost = 5
+		completion_reward = {
+		add_timed_idea = {
+				idea = GER_barbarossa_surpluswintergear
+				days = 170
+			}
+		}
+	}
+
+	focus = {
+		id = GER_barb_execute_summergear
+		icon = GFX_ger_final_crusade
+		prerequisite = { focus = GER_barb_summergear }		
 		
 		available = {
 			has_army_manpower = { size > 1199999 }
@@ -3026,15 +3087,86 @@ focus_tree = {
 		will_lead_to_war_with = SOV
 		x = 0
 		y = 1
-		relative_position_id = GER_prepare_barb
-		cost = 2
+		relative_position_id = GER_barb_summergear
+		cost = 1
 		completion_reward = {
 			declare_war_on = {
 				target = SOV
 				type = annex_everything
 			}
 			add_timed_idea = {
-				idea = GER_barbarossa
+				idea = GER_barbarossa_summergear
+				days = 150
+			}
+			add_timed_idea = {
+				idea = GER_barbarossa_winteriscold
+				days = 240
+			}
+			activate_mission = GER_barbarossa_mission_moscow
+			activate_mission = GER_barbarossa_mission_kiev
+			activate_mission = GER_barbarossa_mission_lenin
+		}
+	}
+
+	focus = {
+		id = GER_barb_execute_wintergear
+		icon = GFX_ger_final_crusade
+		prerequisite = { focus = GER_barb_wintergear }	
+		
+		available = {
+			has_army_manpower = { size > 1199999 }
+			OR = {
+				AND = {
+					date > 1939.3.1
+					date < 1939.8.1
+				}
+				AND = {
+					date > 1940.3.1
+					date < 1940.8.1
+				}
+				AND = {
+					date > 1941.3.1
+					date < 1941.8.1
+				}
+				AND = {
+					date > 1942.3.1
+					date < 1942.8.1
+				}
+				AND = {
+					date > 1943.3.1
+					date < 1943.8.1
+				}
+				AND = {
+					date > 1944.3.1
+					date < 1944.8.1
+				}
+				AND = {
+					date > 1945.3.1
+					date < 1945.8.1
+				}
+				AND = {
+					date > 1946.3.1
+					date < 1946.8.1
+				}
+			}
+		}
+
+		bypass = {
+			has_war_with = SOV
+		}
+
+		will_lead_to_war_with = SOV
+		x = 0
+		y = 1
+		relative_position_id = GER_barb_wintergear
+		cost = 1
+		completion_reward = {
+			declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = GER_barbarossa_wintergear
 				days = 150
 			}
 			activate_mission = GER_barbarossa_mission_moscow
@@ -3042,11 +3174,12 @@ focus_tree = {
 			activate_mission = GER_barbarossa_mission_lenin
 		}
 	}
-	
+
 	focus = {
 		id = GER_ostwall
 		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = GER_barb }
+		prerequisite = { focus = GER_barb_execute_wintergear }
+		prerequisite = { focus = GER_barb_execute_summergear }
 		available = {
 			any_country = {
 				OR = {
@@ -3068,9 +3201,9 @@ focus_tree = {
 				}
 			}
 		}
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = GER_barb
+		relative_position_id = GER_barb_execute_wintergear
 		cost = 10
 		ai_will_do = {
 			factor = 1
