@@ -1,4 +1,0 @@
-storage = {
-	icon = generic_prospect_for_resources
-
-}
