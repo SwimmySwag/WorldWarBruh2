@@ -1,0 +1,31 @@
+
+state={
+	id=800
+	name="STATE_800"
+	manpower = 362689
+	resources={
+		chromium=35 # was: 46
+	}
+	state_category = rural
+
+	history={
+		owner = TUR
+		victory_points = {
+			1005 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		add_core_of = TUR
+	}
+
+	provinces={
+		652 4583 6935 7470 11880 12376 13121 
+	}
+}
+
+
+
+
