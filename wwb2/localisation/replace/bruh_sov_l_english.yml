@@ -147,6 +147,7 @@
  SOV_coordinate_industry_idea:0 "Coordinate the Industry"
  SOV_order_270_idea:0 "Order 270"
  SOV_tib_volunteers:0 "Border War Commitments"
+ SOV_first_wave:0 "Emergency NKVD Recruitment"
 
  #### DECISIONS ####
  SOV_winter_off:0 "Winter Offensive"

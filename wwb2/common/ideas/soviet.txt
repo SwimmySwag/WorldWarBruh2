@@ -621,6 +621,21 @@ ideas = {
 				production_speed_arms_factory_factor = 0.1
 			}
 		}
+		
+		SOV_first_wave = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			picture = MEX_politicised_army
+			
+			modifier = {
+				training_time_army_factor = -0.75
+			}
+		}
 	
 		SOV_pcdi_idea = {
 		
